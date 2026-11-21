@@ -1,5 +1,5 @@
 /* Çevrimdışı çalışma için önbellek. Önce ağdan güncel dosya istenir, internet yoksa önbellekteki kopya kullanılır. İçerik güncellendiğinde SURUM değerini artır. */
-var SURUM = "sosyoloji-v5";
+var SURUM = "sosyoloji-v6";
 var DOSYALAR = [
   "./",
   "index.html",
