@@ -3,7 +3,7 @@
 Bu klasördeki dosyalar Galaxy Store başvurusu için hazırlandı:
 
 - `simge-512.png`: uygulama simgesi (512×512)
-- `ekran-goruntuleri/`: altı telefon ekran görüntüsü (1082×2202)
+- `ekran-goruntuleri/`: sekiz telefon ekran görüntüsü (1082×2202)
 - `one-cikan-gorsel-1024x500.png`: tanıtım görseli (Google Play de aynı ölçüyü istiyor)
 
 Uygulamanın adresi: `https://alierendemir.github.io/sosyoloji/`
@@ -33,7 +33,7 @@ https://seller.samsungapps.com adresinden giriş yap ve sağ üstteki **Add New 
 | Açıklama | Aşağıdaki "Uzun açıklama" metni |
 | Kategori | Eğitim (Education) |
 | Simge | `simge-512.png` |
-| Ekran görüntüleri | `ekran-goruntuleri/` klasöründeki altı dosya |
+| Ekran görüntüleri | `ekran-goruntuleri/` klasöründeki sekiz dosya |
 | Yaş derecelendirmesi | Herkes ya da en düşük seviye. Uygulamada şiddet, kumar veya yetişkin içerik bulunmuyor |
 | Gizlilik politikası URL'si | `https://alierendemir.github.io/sosyoloji/gizlilik.html` |
 | Destek e-postası | Kendi e-posta adresin |
@@ -62,7 +62,7 @@ https://seller.samsungapps.com adresinden giriş yap ve sağ üstteki **Add New 
 ## Mağaza metinleri
 
 **Kısa tanıtım:**
-Sosyoloji kavramları, kuramcılar, Türkçe makaleler ve tez yazım rehberi
+Sosyoloji kavramları, kuramcılar, Türkçe makaleler, oyunlar ve tez rehberi
 
 **Uzun açıklama:**
 
@@ -75,13 +75,14 @@ Sosyoloji Cebimde sosyoloji öğrencileri ve araştırmacılar için hazırlanm�
 • Kuramsal çerçeve kurma ve kavram kullanımı rehberi
 • APA atıf oluşturucu
 • Her seferinde farklı sorularla kısa testler
+• Dört sosyoloji oyunu: Hafıza Kartları, Saha Notu, Zaman Çizelgesi ve Kavram Tahmini
 • Okuma listesi
 • İnternet olmadan çalışır, hesap istemez, reklam içermez ve hiçbir kişisel veri toplamaz
 
 İçerik düzenli olarak yeni kuramcılar, kavramlar ve makalelerle genişletilmektedir.
 
 **Anahtar kelimeler:**
-sosyoloji, kuram, kuramcı, kavram, tez, makale, APA, atıf, kaynakça, akademik, üniversite
+sosyoloji, kuram, kuramcı, kavram, tez, makale, APA, atıf, kaynakça, akademik, üniversite, oyun, test
 
 ## Güncellemeler hakkında
 

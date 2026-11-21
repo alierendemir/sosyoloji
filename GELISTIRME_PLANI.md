@@ -29,6 +29,15 @@ Haftalık güncelleme görevi bu dosyayı okuyarak çalışır. Her hafta "Sıra
 
 İlk sürümde 27 kuramcı bulunuyor: Comte, Marx, Tönnies, Durkheim, Simmel, Weber, Mead, Gramsci, Parsons, Elias, Merton, Mills, Goffman, Berger ve Luckmann, Habermas, Foucault, Bourdieu, Baudrillard, Giddens, Beck, Bauman, Castells, Butler, İbn Haldun, Ziya Gökalp, Prens Sabahattin ve Şerif Mardin.
 
+## Oyunlar
+
+Sürüm 1.1 ile dört oyun eklendi: Hafıza Kartları, Saha Notu, Zaman Çizelgesi ve Kavram Tahmini. Oyunlar kavram ve kuramcı verisini kullandığı için yeni eklenen her kuramcı ve kavram oyunlara kendiliğinden girer.
+
+Yeni oyun fikirleri:
+- Kim söyledi? Kuramcının bir fikrini okuyup sahibini bulma (zamanlı sürüm)
+- Kavram haritası: ilişkili kavramları birbirine bağlama
+- Ekol eşleştirme: kuramcıları ekollerine göre gruplama
+
 ## Diğer geliştirme fikirleri
 
 - Kavram sayfalarına "Karşılaştır" bölümü (örneğin anomi ile yabancılaşma)

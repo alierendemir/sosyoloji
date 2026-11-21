@@ -139,7 +139,7 @@
       '<a class="kutucuk" href="#/kavramlar"><b>' + KV.length + ' kavram</b><span>Tanım, örnek ve kullanım önerisi</span></a>' +
       '<a class="kutucuk" href="#/kuramcilar"><b>' + KR.length + ' kuramcı</b><span>Fikirler, eserler ve Türkçe kaynaklar</span></a>' +
       '<a class="kutucuk" href="#/makaleler"><b>' + MK.length + ' makale</b><span>Künyesi doğrulanmış Türkçe çalışmalar</span></a>' +
-      '<a class="kutucuk" href="#/test"><b>Kısa test</b><span>Bilgini 10 soruyla sına</span></a>' +
+      '<a class="kutucuk" href="#/oyunlar"><b>Oyunlar</b><span>Test, hafıza kartları ve daha fazlası</span></a>' +
       '<a class="kutucuk" href="#/tez"><b>Tezine ekle</b><span>Kuramsal çerçeve ve APA atıf</span></a>' +
       '<a class="kutucuk" href="#/listem"><b>Okuma listem</b><span>Kaydettiklerin</span></a>' +
       "</div>" +
@@ -474,12 +474,12 @@
       "<li>" + KV.length + " kavram için tanım, örnek ve makalede kullanım önerisi</li>" +
       "<li>" + KR.length + " kuramcı için temel fikirler, eserler ve tez önerileri</li>" +
       "<li>" + MK.length + " Türkçe makale (künyeler DergiPark üzerindeki makale sayfalarından doğrulanmıştır)</li>" +
-      "<li>Kısa testler, tez yazım rehberi ve APA atıf oluşturucu</li></ul></div>" +
+      "<li>Kısa testler, dört sosyoloji oyunu, tez yazım rehberi ve APA atıf oluşturucu</li></ul></div>" +
       '<div class="bolum"><h2>Gizlilik</h2><p>Uygulama hiçbir kişisel veri toplamaz, hesap istemez ve reklam içermez. Okuma listen ve test sonucun yalnızca cihazındaki tarayıcı belleğinde tutulur ve hiçbir sunucuya gönderilmez. Makale bağlantılarına dokunduğunda ilgili dergi sayfası tarayıcında açılır.</p>' +
       '<p><a href="gizlilik.html">Gizlilik politikasının tamamı</a></p></div>' +
       '<div class="bolum"><h2>Kaynaklar hakkında not</h2><p>Kuramcıların eserlerinde özgün ad ve ilk yayın yılı verilmiştir. Türkçe baskılar için yayınevi ve yıl bilgisi baskıya göre değiştiğinden kaynakçana elindeki baskının künyesini yazman önerilir. Makale özetleri makalelerin kendi özetlerine dayanarak hazırlanmış kısa tanıtımlardır.</p></div>' +
       '<div class="bolum"><h2>Görünüm</h2><div class="dugme-sira"><button class="dugme" data-tema="">Sistem</button><button class="dugme" data-tema="light">Açık</button><button class="dugme" data-tema="dark">Koyu</button></div></div>' +
-      '<p class="alt-not">Sürüm 1.0</p>';
+      '<p class="alt-not">Sürüm 1.1</p>';
   }
   function hakkindaBagla() {
     document.querySelectorAll("[data-tema]").forEach(function (b) {
@@ -487,6 +487,17 @@
     });
   }
   function temaUygula(t) { if (t) document.documentElement.setAttribute("data-theme", t); else document.documentElement.removeAttribute("data-theme"); }
+
+  function oyunlarSayfa() {
+    var oyunlar = window.OYUN_LISTESI || [];
+    var enIyiTest = oku("test-en-iyi", null);
+    return '<h1>Oyunlar</h1><p class="soluk">Sosyolojiyi oynayarak öğren. Skorların yalnızca bu cihazda saklanır.</p>' +
+      '<a class="kart kart-link oyun-kart" href="#/test"><span class="oyun-simge" aria-hidden="true">✅</span><span><h3>Kısa Test</h3><span class="soluk kucuk">Kavramlar, kuramcılar ve eserler üzerine 10 soru.' + (enIyiTest !== null ? " En iyi: " + enIyiTest + " / 10" : "") + '</span></span></a>' +
+      oyunlar.map(function (o) {
+        var en = oku("oyun-" + o.id, null);
+        return '<a class="kart kart-link oyun-kart" href="#/oyun/' + o.id + '"><span class="oyun-simge" aria-hidden="true">' + o.simge + '</span><span><h3>' + esc(o.ad) + '</h3><span class="soluk kucuk">' + esc(o.aciklama) + (en !== null ? " En iyi: " + en + (o.id === "hafiza" ? " hamle" : "") : "") + "</span></span></a>";
+      }).join("");
+  }
 
   function bulunamadi() { return '<p class="bos">Aradığın sayfa bulunamadı. <a href="#/">Ana sayfaya dön</a></p>'; }
 
@@ -502,7 +513,9 @@
       case "kuramcilar": menu = "kuramci"; html = kuramcilarSayfa(); bagla = kuramcilarBagla; break;
       case "kuramci": menu = "kuramci"; html = kuramciSayfa(decodeURIComponent(p[1] || "")); break;
       case "makaleler": menu = "ana"; html = makalelerSayfa(); bagla = makalelerBagla; break;
-      case "test": menu = "test"; html = testSayfa(); bagla = testBagla; break;
+      case "test": menu = "oyun"; html = testSayfa(); bagla = testBagla; break;
+      case "oyunlar": menu = "oyun"; html = oyunlarSayfa(); break;
+      case "oyun": menu = "oyun"; html = ""; bagla = function () { if (window.OYUN_BASLAT) window.OYUN_BASLAT(decodeURIComponent(p[1] || "")); }; break;
       case "tez": menu = "tez"; html = tezSayfa(); bagla = tezBagla; break;
       case "listem": menu = ""; html = listemSayfa(); bagla = listemBagla; break;
       case "hakkinda": menu = ""; html = hakkindaSayfa(); bagla = hakkindaBagla; break;
@@ -528,6 +541,8 @@
       kopyala(k.getAttribute("data-kopya") === "apa" ? apaKaynak(m, false) : metinIci(m));
     }
   });
+
+  window.SC = { esc: esc, karistir: karistir, oku: oku, yaz: yaz, bildir: bildir, KR: KR, KV: KV, kuramciById: kuramciById, kavramById: kavramById };
 
   temaUygula(oku("tema", ""));
   window.addEventListener("hashchange", yonlendir);
