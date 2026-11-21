@@ -242,3 +242,33 @@ window.MAKALELER.push(
     url: "https://dergipark.org.tr/tr/pub/ankuayd/article/508160",
     ozet: "1861'deki Amerikan İç Savaşı'nın Çukurova'yı dünya pamuk ağına nasıl bağladığını ve pamuk ekonomisinin Adana'da kentleşmeden gündelik yaşama uzanan dönüşümlerini inceler." }
 );
+
+/* 23 Kasım 2026 haftası: haftanın makalesi ve 02 Adıyaman kaynakları (künyeler DergiPark sayfalarından ve PDF başlıklarından doğrulanmıştır). */
+window.MAKALELER.push(
+  { kuramci: ["marx"], yazarlar: [["Güler", "Hasan"]], yil: 2025,
+    baslik: "Tarımda emeğin dönüşümü: “Kırsal gettolar”",
+    dergi: "Memleket Siyaset Yönetim", cilt: "20", sayi: "44", sayfa: "73–98", doi: "10.56524/msydergi.1524939",
+    url: "https://dergipark.org.tr/tr/pub/msydergi/article/1524939",
+    ozet: "Neoliberal politikalarla yeniden yapılanan Türkiye kırsalında emeğin dönüşümünü tartışır ve kırın bugününü anlamak için \"kırsal gettolar\" kavramsallaştırmasını önerir." },
+  { kuramci: [], il: "adiyaman", yazarlar: [["Doğan", "Hamdi"]], yil: 2012,
+    baslik: "Milli Mücadelede Adıyaman ve çevresi",
+    dergi: "Gaziantep Üniversitesi Sosyal Bilimler Dergisi", cilt: "11", sayi: "2", sayfa: "555–585", doi: "",
+    url: "https://dergipark.org.tr/tr/download/article-file/223335",
+    ozet: "Adıyaman, Kahta, Besni ve Samsat'ın Milli Mücadele yıllarındaki durumunu arşiv belgeleriyle inceler. Girişinde bölgenin uzun yerleşim tarihine ve Hısn-ı Mansur adına değinir." },
+  { kuramci: [], il: "adiyaman", yazarlar: [["Toprak", "Seydi Vakkas"]], yil: 2016,
+    baslik: "1835/1836 tarihli nüfus defterine göre Hısnımansur kazası nüfus yapısı ve gayrimüslim nüfusun şehrin ekonomik yapısındaki yeri",
+    dergi: "Mediterranean Journal of Humanities", cilt: "6", sayi: "2", sayfa: "443–458", doi: "10.13114/MJH.2016.309",
+    url: "https://dergipark.org.tr/tr/download/article-file/3691949",
+    ozet: "Hısnımansur'da 1835'te yapılan ilk modern nüfus sayımının kayıtlarına dayanarak gayrimüslim cemaatin nüfus yapısını ve kentin ekonomik hayatındaki yerini inceler." },
+  { kuramci: [], il: "adiyaman", yazarlar: [["Gündüz", "Mehmet"]], yil: 2019,
+    baslik: "Adıyaman kazasının vilayet olması ve bu süreçte yaşanan gelişmeler",
+    dergi: "Kent Araştırmaları Dergisi", cilt: "10", sayi: "28", sayfa: "1230–1254", doi: "10.31198/idealkent.634785",
+    url: "https://dergipark.org.tr/tr/download/article-file/966144",
+    ozet: "Adıyaman'ın 1954'te kazadan vilayete dönüşme sürecini, Meclis tutanakları ve dönemin basını üzerinden inceler. Besni'nin Adıyaman'a bağlanması tartışmasına geniş yer verir." },
+  { kuramci: [], il: "adiyaman", yazarlar: [["Kaya", "Gazanfer"]], yil: 2018,
+    baslik: "Azgelişmiş bölgenin tekstil sektöründe kadın işçi olmak: Adıyaman örneği",
+    dergi: "Elektronik Sosyal Bilimler Dergisi", cilt: "17", sayi: "68", sayfa: "1502–1517", doi: "",
+    url: "https://dergipark.org.tr/tr/download/article-file/550285",
+    ozet: "Adıyaman Organize Sanayi Bölgesi'ndeki 350 tekstil işçisiyle yapılan saha araştırmasına dayanarak kadın işçilerin çalışma koşullarını inceler. Tütün tarımındaki daralmanın göçe ve kentleşmeye etkisine de değinir." }
+);
+
