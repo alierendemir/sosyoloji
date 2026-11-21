@@ -5,6 +5,7 @@
   var KV = window.KAVRAMLAR || [];
   var MK = window.MAKALELER || [];
   var RH = window.REHBER || [];
+  var HF = window.HAFTALIK || { makaleler: [], kitaplar: [], iller: [] };
   var $icerik = document.getElementById("icerik");
 
   var kuramciById = {}; KR.forEach(function (k) { kuramciById[k.id] = k; });
@@ -134,6 +135,7 @@
       '<input class="arama" id="genel-arama" type="search" placeholder="Kavram, kuramcı ya da makale ara…" autocomplete="off" aria-label="Arama">' +
       '<div id="arama-sonuc"></div>' +
       '<div id="ana-blok">' +
+      buHaftaBlok() +
       '<div class="bolum"><h2>Günün kavramı</h2><a class="kart kart-link" href="#/kavram/' + g.id + '"><h3>' + esc(g.ad) + '</h3><p class="kucuk" style="margin:0">' + esc(g.tanim) + "</p></a></div>" +
       '<div class="izgara">' +
       '<a class="kutucuk" href="#/kavramlar"><b>' + KV.length + ' kavram</b><span>Tanım, örnek ve kullanım önerisi</span></a>' +
@@ -481,7 +483,7 @@
       '<p><a href="gizlilik.html">Gizlilik politikasının tamamı</a></p></div>' +
       '<div class="bolum"><h2>Kaynaklar hakkında not</h2><p>Kuramcıların eserlerinde özgün ad ve ilk yayın yılı verilmiştir. Türkçe baskılar için yayınevi ve yıl bilgisi baskıya göre değiştiğinden kaynakçana elindeki baskının künyesini yazman önerilir. Makale özetleri makalelerin kendi özetlerine dayanarak hazırlanmış kısa tanıtımlardır.</p></div>' +
       '<div class="bolum"><h2>Görünüm</h2><div class="dugme-sira"><button class="dugme" data-tema="">Sistem</button><button class="dugme" data-tema="light">Açık</button><button class="dugme" data-tema="dark">Koyu</button></div></div>' +
-      '<p class="alt-not">Sürüm 1.2 · © 2026 Ali Eren Demir</p>';
+      '<p class="alt-not">Sürüm 1.3 · © 2026 Ali Eren Demir</p>';
   }
   function hakkindaBagla() {
     var pd = document.getElementById("paylas");
@@ -495,6 +497,62 @@
     });
   }
   function temaUygula(t) { if (t) document.documentElement.setAttribute("data-theme", t); else document.documentElement.removeAttribute("data-theme"); }
+
+  var AYLAR = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"];
+  function haftaYazi(t) { var p = String(t).split("-"); return +p[2] + " " + AYLAR[+p[1] - 1] + " " + p[0] + " haftası"; }
+  function son(dizi) { return dizi && dizi.length ? dizi[dizi.length - 1] : null; }
+  function kitapApa(k) {
+    return apaYazarlar(k.yazarlar) + " (" + k.yil + "). " + k.ad + (k.cevirmen ? " (Ç. " + k.cevirmen + ")" : "") + ". " + k.yayinevi + "." + (k.ozgunYil ? " (Özgün eserin yayın tarihi " + k.ozgunYil + ")" : "");
+  }
+  function kitapKart(k, buyuk) {
+    var yz = k.yazarlar.map(function (y) { return y[1] + " " + y[0]; }).join(" ve ");
+    return '<div class="kart"><div class="soluk kucuk">Haftanın kitabı · ' + esc(haftaYazi(k.hafta)) + '</div><h3 style="margin-top:4px">' + esc(k.ad) + "</h3>" +
+      '<div class="soluk kucuk">' + esc(yz) + (k.cevirmen ? " · Çeviren: " + esc(k.cevirmen) : "") + " · " + esc(k.yayinevi) + ", " + esc(k.yil) + "</div>" +
+      (buyuk ? '<p style="margin-top:10px">' + esc(k.neden) + "</p>" + (k.kimlere ? '<p class="kucuk"><b>Kimlere:</b> ' + esc(k.kimlere) + "</p>" : "") +
+        '<p class="soluk kucuk">Özgün eser: ' + esc(k.ozgun) + (k.isbn ? " · ISBN " + esc(k.isbn) : "") + "</p>" +
+        '<div class="dugme-sira"><button class="dugme" data-kitap-kopya="' + esc(k.hafta) + '">APA kaynakça</button>' +
+        (k.kuramci && kuramciById[k.kuramci] ? '<a class="dugme" href="#/kuramci/' + k.kuramci + '">Kuramcı sayfası</a>' : "") +
+        (k.kaynak ? '<a class="dugme" href="' + esc(k.kaynak.url) + '" target="_blank" rel="noopener">Kitap değerlendirmesi ↗</a>' : "") + "</div>" +
+        (k.kaynak ? '<p class="soluk kucuk" style="margin-top:8px">Künye kaynağı: ' + esc(k.kaynak.ad) + "</p>" : "")
+        : '<p class="kucuk" style="margin:8px 0 0">' + esc(k.neden) + "</p>") + "</div>";
+  }
+  function haftaninMakalesiBlok(h, buyuk) {
+    var m = makaleBul(h.url); if (!m) return "";
+    return '<div class="soluk kucuk" style="margin-bottom:6px">Haftanın makalesi · ' + esc(haftaYazi(h.hafta)) + "</div>" + makaleKart(m) +
+      (buyuk ? '<div class="alinti">' + esc(h.neden) + "</div>" +
+        (h.kavramlar && h.kavramlar.length ? '<p class="kucuk"><b>İlgili kavramlar:</b></p>' + kavramEtiketleri(h.kavramlar) : "") +
+        (h.sorular && h.sorular.length ? '<p class="kucuk" style="margin-top:10px"><b>Okurken düşünmek için:</b></p><ol class="duz kucuk">' + h.sorular.map(function (s) { return "<li>" + esc(s) + "</li>"; }).join("") + "</ol>" : "") : "");
+  }
+  function ilKart(il) {
+    return '<a class="kart kart-link" href="#/il/' + il.id + '"><div class="soluk kucuk">' + esc(il.plaka) + " · İllerin tarihsel sosyolojisi</div><h3 style=\"margin-top:4px\">" + esc(il.ad) + '</h3><p class="kucuk" style="margin:0">' + esc(il.ozet) + "</p></a>";
+  }
+  function buHaftaBlok() {
+    var m = son(HF.makaleler), k = son(HF.kitaplar), il = son(HF.iller);
+    if (!m && !k && !il) return "";
+    var mk = m ? makaleBul(m.url) : null;
+    return '<div class="bolum"><h2>Bu hafta</h2>' +
+      (mk ? '<a class="kart kart-link" href="#/haftalik"><div class="soluk kucuk">📄 Haftanın makalesi</div><h3 style="margin-top:4px">' + esc(mk.baslik) + '</h3><div class="soluk kucuk">' + esc(mk.yazarlar.map(function (y) { return y[1] + " " + y[0]; }).join(", ")) + " · " + esc(mk.dergi) + ", " + mk.yil + "</div></a>" : "") +
+      (k ? '<a class="kart kart-link" href="#/haftalik"><div class="soluk kucuk">📚 Haftanın kitabı</div><h3 style="margin-top:4px">' + esc(k.ad) + '</h3><div class="soluk kucuk">' + esc(k.yazarlar.map(function (y) { return y[1] + " " + y[0]; }).join(" ve ")) + "</div></a>" : "") +
+      (il ? '<a class="kart kart-link" href="#/il/' + il.id + '"><div class="soluk kucuk">🗺️ İllerin tarihsel sosyolojisi · ' + esc(il.plaka) + '</div><h3 style="margin-top:4px">' + esc(il.ad) + '</h3><p class="kucuk" style="margin:0">' + esc(il.ozet.split(/(?<=\.)\s/)[0]) + "</p></a>" : "") +
+      '<a class="kucuk" href="#/haftalik">Önceki haftalar →</a></div>';
+  }
+  function haftalikSayfa() {
+    var m = HF.makaleler.slice().reverse(), k = HF.kitaplar.slice().reverse();
+    return "<h1>Haftalık</h1><p class=\"soluk\">Her hafta bir makale, bir kitap ve bir il. Yeni içerik her pazartesi eklenir.</p>" +
+      '<div class="bolum"><h2>Haftanın makalesi</h2>' + (m.length ? haftaninMakalesiBlok(m[0], true) + m.slice(1).map(function (h) { return haftaninMakalesiBlok(h, false); }).join("") : '<p class="soluk">Henüz eklenmedi.</p>') + "</div>" +
+      '<div class="bolum"><h2>Haftanın kitabı</h2>' + (k.length ? kitapKart(k[0], true) + k.slice(1).map(function (x) { return kitapKart(x, false); }).join("") : '<p class="soluk">Henüz eklenmedi.</p>') + "</div>" +
+      '<div class="bolum"><h2>İllerin tarihsel sosyolojisi</h2><p class="soluk kucuk">81 ilden ' + HF.iller.length + ' tanesi yazıldı. İller plaka sırasıyla ekleniyor.</p>' + HF.iller.slice().reverse().map(ilKart).join("") + "</div>";
+  }
+  function ilSayfa(id) {
+    var il = null; HF.iller.forEach(function (x) { if (x.id === id) il = x; });
+    if (!il) return bulunamadi();
+    var kaynak = MK.filter(function (m) { return m.il === il.id; });
+    return '<a class="geri" href="#/haftalik">← Haftalık</a><div class="soluk kucuk">' + esc(il.plaka) + " · İllerin tarihsel sosyolojisi · " + esc(haftaYazi(il.hafta)) + "</div><h1>" + esc(il.ad) + "</h1>" +
+      '<p class="alinti">' + esc(il.ozet) + "</p>" +
+      il.bolumler.map(function (b) { return '<div class="bolum"><h2>' + esc(b.baslik) + "</h2><p>" + esc(b.metin) + "</p></div>"; }).join("") +
+      (il.kavramlar && il.kavramlar.length ? '<div class="bolum"><h2>İlgili kavramlar</h2>' + kavramEtiketleri(il.kavramlar) + "</div>" : "") +
+      (kaynak.length ? '<div class="bolum"><h2>Kaynaklar</h2>' + kaynak.map(makaleKart).join("") + "</div>" : "");
+  }
 
   function oyunlarSayfa() {
     var oyunlar = window.OYUN_LISTESI || [];
@@ -523,6 +581,8 @@
       case "makaleler": menu = "ana"; html = makalelerSayfa(); bagla = makalelerBagla; break;
       case "test": menu = "oyun"; html = testSayfa(); bagla = testBagla; break;
       case "oyunlar": menu = "oyun"; html = oyunlarSayfa(); break;
+      case "haftalik": menu = "ana"; html = haftalikSayfa(); break;
+      case "il": menu = "ana"; html = ilSayfa(decodeURIComponent(p[1] || "")); break;
       case "oyun": menu = "oyun"; html = ""; bagla = function () { if (window.OYUN_BASLAT) window.OYUN_BASLAT(decodeURIComponent(p[1] || "")); }; break;
       case "tez": menu = "tez"; html = tezSayfa(); bagla = tezBagla; break;
       case "listem": menu = ""; html = listemSayfa(); bagla = listemBagla; break;
@@ -543,6 +603,11 @@
       y.textContent = eklendi ? "★" : "☆"; y.setAttribute("aria-pressed", String(eklendi));
       return;
     }
+    var kk = e.target.closest("[data-kitap-kopya]");
+    if (kk) {
+      HF.kitaplar.forEach(function (x) { if (x.hafta === kk.getAttribute("data-kitap-kopya")) kopyala(kitapApa(x)); });
+      return;
+    }
     var k = e.target.closest("[data-kopya]");
     if (k) {
       var m = makaleBul(k.getAttribute("data-url")); if (!m) return;
@@ -557,6 +622,12 @@
   yonlendir();
 
   if ("serviceWorker" in navigator && location.protocol !== "file:") {
-    window.addEventListener("load", function () { navigator.serviceWorker.register("sw.js").catch(function () { /* çevrimdışı önbellek kullanılamıyor */ }); });
+    var oncekiDenetleyici = !!navigator.serviceWorker.controller, yenilendi = false;
+    navigator.serviceWorker.addEventListener("controllerchange", function () {
+      if (oncekiDenetleyici && !yenilendi) { yenilendi = true; location.reload(); }
+    });
+    window.addEventListener("load", function () {
+      navigator.serviceWorker.register("sw.js", { updateViaCache: "none" }).then(function (k) { k.update(); }).catch(function () { /* çevrimdışı önbellek kullanılamıyor */ });
+    });
   }
 })();

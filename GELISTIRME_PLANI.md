@@ -2,6 +2,16 @@
 
 Haftalık güncelleme görevi bu dosyayı okuyarak çalışır. Her hafta "Sıradakiler" listesinin başından bir ya da iki kuramcı eklenir, ardından eklenenler "Eklenenler" bölümüne taşınır. Listenin sırasını istediğin gibi değiştirebilirsin.
 
+## Haftalık içerik (app/data/haftalik.js)
+
+Her hafta üç kayıt eklenir. Yeni kayıt ilgili dizinin sonuna yazılır ve ana sayfadaki "Bu hafta" bölümünde görünür.
+
+- **Haftanın makalesi:** Künyesi DergiPark sayfasından doğrulanmış bir sosyoloji makalesi. Makale makaleler.js dosyasına da eklenir. Kayıtta "neden okumalı" metni, ilgili kavramlar ve 2–3 tartışma sorusu bulunur.
+- **Haftanın kitabı:** Türkçe baskısının künyesi (çevirmen, yayınevi, yıl ve varsa ISBN) DergiPark'taki bir kitap değerlendirmesinden doğrulanmış bir kitap. Doğrulanan sayfa "kaynak" alanına yazılır.
+- **İllerin tarihsel sosyolojisi:** 81 il plaka sırasıyla yazılır. Yazıdaki bilgiler yalnızca künyesi doğrulanmış kaynaklara dayanır. Kaynaklar makaleler.js dosyasına "il" alanıyla eklenir. Her yazı "Bu yazının kapsamı" bölümüyle biter.
+
+Eklenen iller: 01 Adana (16 Kasım 2026). Sıradaki il: 02 Adıyaman.
+
 ## Sıradakiler
 
 1. Niyazi Berkes (Türk sosyolojisi, sekülerleşme)
