@@ -135,6 +135,9 @@
       '<input class="arama" id="genel-arama" type="search" placeholder="Kavram, kuramcı ya da makale ara…" autocomplete="off" aria-label="Arama">' +
       '<div id="arama-sonuc"></div>' +
       '<div id="ana-blok">' +
+      '<div class="kart" style="margin-top:16px"><b style="font-family:var(--serif)">🎬 Her gün 60 saniyede sosyoloji</b><p class="kucuk" style="margin:4px 0 0">Kısa videolarla kavramlar, kuramcılar ve gündelik hayatın sosyolojisi.</p>' +
+      '<div class="sosyal-kart"><a class="sosyal-dugme ig" href="https://www.instagram.com/sosyolojikdusun/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.3" fill="currentColor"/></svg>Instagram</a>' +
+      '<a class="sosyal-dugme yt" href="https://www.youtube.com/@sosyolojikdusun" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" fill="currentColor"/><path d="M10 9l5 3-5 3z" fill="var(--yuzey)"/></svg>YouTube</a></div></div>' +
       buHaftaBlok() +
       '<div class="bolum"><h2>Günün kavramı</h2><a class="kart kart-link" href="#/kavram/' + g.id + '"><h3>' + esc(g.ad) + '</h3><p class="kucuk" style="margin:0">' + esc(g.tanim) + "</p></a></div>" +
       '<div class="izgara">' +
@@ -474,6 +477,9 @@
       "<p>Sosyoloji Cebimde, sosyoloji öğrencileri ve araştırmacılar için hazırlanmış ücretsiz bir öğrenme ve başvuru uygulamasıdır.</p>" +
       '<div class="kart"><div class="soluk kucuk">Geliştiren</div><b style="font-family:var(--serif);font-size:1.15rem">Ali Eren Demir</b>' +
       '<div class="dugme-sira"><a class="dugme" href="https://github.com/alierendemir/sosyoloji" target="_blank" rel="noopener">GitHub ↗</a><button class="dugme" id="paylas">Uygulamayı paylaş</button></div></div>' +
+      '<div class="kart"><div class="soluk kucuk">Her gün 60 saniyelik sosyoloji videoları</div><b style="font-family:var(--serif);font-size:1.1rem">@sosyolojikdusun</b>' +
+      '<div class="sosyal-kart"><a class="sosyal-dugme ig" href="https://www.instagram.com/sosyolojikdusun/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.3" fill="currentColor"/></svg>Instagram\'da takip et</a>' +
+      '<a class="sosyal-dugme yt" href="https://www.youtube.com/@sosyolojikdusun" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" fill="currentColor"/><path d="M10 9l5 3-5 3z" fill="var(--yuzey)"/></svg>YouTube\'da abone ol</a></div></div>' +
       '<div class="bolum"><h2>İçerik</h2><ul class="duz">' +
       "<li>" + KV.length + " kavram için tanım, örnek ve makalede kullanım önerisi</li>" +
       "<li>" + KR.length + " kuramcı için temel fikirler, eserler ve tez önerileri</li>" +
@@ -483,7 +489,7 @@
       '<p><a href="gizlilik.html">Gizlilik politikasının tamamı</a></p></div>' +
       '<div class="bolum"><h2>Kaynaklar hakkında not</h2><p>Kuramcıların eserlerinde özgün ad ve ilk yayın yılı verilmiştir. Türkçe baskılar için yayınevi ve yıl bilgisi baskıya göre değiştiğinden kaynakçana elindeki baskının künyesini yazman önerilir. Makale özetleri makalelerin kendi özetlerine dayanarak hazırlanmış kısa tanıtımlardır.</p></div>' +
       '<div class="bolum"><h2>Görünüm</h2><div class="dugme-sira"><button class="dugme" data-tema="">Sistem</button><button class="dugme" data-tema="light">Açık</button><button class="dugme" data-tema="dark">Koyu</button></div></div>' +
-      '<p class="alt-not">Sürüm 1.4 · © 2026 Ali Eren Demir</p>';
+      '<p class="alt-not">Sürüm 1.5 · © 2026 Ali Eren Demir</p>';
   }
   function hakkindaBagla() {
     var pd = document.getElementById("paylas");
