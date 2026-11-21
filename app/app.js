@@ -622,6 +622,12 @@
   yonlendir();
 
   if ("serviceWorker" in navigator && location.protocol !== "file:") {
-    window.addEventListener("load", function () { navigator.serviceWorker.register("sw.js").catch(function () { /* çevrimdışı önbellek kullanılamıyor */ }); });
+    var oncekiDenetleyici = !!navigator.serviceWorker.controller, yenilendi = false;
+    navigator.serviceWorker.addEventListener("controllerchange", function () {
+      if (oncekiDenetleyici && !yenilendi) { yenilendi = true; location.reload(); }
+    });
+    window.addEventListener("load", function () {
+      navigator.serviceWorker.register("sw.js", { updateViaCache: "none" }).then(function (k) { k.update(); }).catch(function () { /* çevrimdışı önbellek kullanılamıyor */ });
+    });
   }
 })();

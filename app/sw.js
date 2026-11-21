@@ -1,4 +1,4 @@
-/* Çevrimdışı çalışma için basit önbellek. İçerik güncellendiğinde SURUM değerini artır. */
+/* Çevrimdışı çalışma için önbellek. Önce ağdan güncel dosya istenir, internet yoksa önbellekteki kopya kullanılır. İçerik güncellendiğinde SURUM değerini artır. */
 var SURUM = "sosyoloji-v4";
 var DOSYALAR = [
   "./",
@@ -29,11 +29,13 @@ self.addEventListener("activate", function (e) {
 
 self.addEventListener("fetch", function (e) {
   if (e.request.method !== "GET" || new URL(e.request.url).origin !== self.location.origin) return;
-  e.respondWith(caches.match(e.request, { ignoreSearch: true }).then(function (r) {
-    return r || fetch(e.request).then(function (yanit) {
+  e.respondWith(fetch(e.request, { cache: "no-cache" }).then(function (yanit) {
+    if (yanit && yanit.ok) {
       var kopya = yanit.clone();
       caches.open(SURUM).then(function (c) { c.put(e.request, kopya); });
-      return yanit;
-    }).catch(function () { return caches.match("index.html"); });
+    }
+    return yanit;
+  }).catch(function () {
+    return caches.match(e.request, { ignoreSearch: true }).then(function (r) { return r || caches.match("index.html"); });
   }));
 });
