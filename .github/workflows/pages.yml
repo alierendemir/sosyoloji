@@ -1,9 +1,13 @@
 name: Uygulamayı GitHub Pages'te yayınla
 
+# Paketleme (build) ve yayın (deploy) ayrı işlerde çalışır. GitHub'ın önerdiği bu
+# düzen, yüklenen paketin yayın adımı başlamadan önce kayda geçmesini sağlar.
+# Tek işte çalışırken zaman zaman "No artifacts named github-pages" hatası alınıyordu.
+
 on:
   push:
     branches: [main]
-    paths: ["app/**"]
+    paths: ["app/**", ".github/workflows/pages.yml"]
   workflow_dispatch:
 
 permissions:
@@ -13,19 +17,24 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: app
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - id: deployment
         uses: actions/deploy-pages@v4
