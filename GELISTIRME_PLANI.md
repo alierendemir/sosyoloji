@@ -10,7 +10,10 @@ Her hafta üç kayıt eklenir. Yeni kayıt ilgili dizinin sonuna yazılır ve an
 - **Haftanın kitabı:** Türkçe baskısının künyesi (çevirmen, yayınevi, yıl ve varsa ISBN) DergiPark'taki bir kitap değerlendirmesinden doğrulanmış bir kitap. Doğrulanan sayfa "kaynak" alanına yazılır.
 - **İllerin tarihsel sosyolojisi:** 81 il plaka sırasıyla yazılır. Yazıdaki bilgiler yalnızca künyesi doğrulanmış kaynaklara dayanır. Kaynaklar makaleler.js dosyasına "il" alanıyla eklenir. Her yazı "Bu yazının kapsamı" bölümüyle biter.
 
-Eklenen iller: 01 Adana (16 Kasım 2026). Sıradaki il: 02 Adıyaman.
+Eklenen iller: 01 Adana (16 Kasım 2026), 02 Adıyaman (23 Kasım 2026). Sıradaki il: 03 Afyonkarahisar.
+
+Haftanın makaleleri: Mutlu (2026) merkez-çevre ve yeni orta sınıf (16 Kasım), Güler (2025) kırsal gettolar (23 Kasım).
+Haftanın kitapları: Berger ve Luckmann, Gerçekliğin Sosyal İnşası (16 Kasım), Goffman, Günlük Yaşamda Benliğin Sunumu (23 Kasım).
 
 ## Sıradakiler
 

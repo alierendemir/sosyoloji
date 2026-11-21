@@ -206,7 +206,7 @@ window.KURAMCILAR = [
     ],
     kavramlar: ["dramaturji", "damga"],
     eserler: [
-      { orijinal: "The Presentation of Self in Everyday Life", yil: "1956 / 1959", tr: "Gündelik Yaşamda Benliğin Sunumu" },
+      { orijinal: "The Presentation of Self in Everyday Life", yil: "1956 / 1959", tr: "Günlük Yaşamda Benliğin Sunumu" },
       { orijinal: "Asylums", yil: "1961", tr: "" },
       { orijinal: "Stigma", yil: "1963", tr: "Damga" }
     ],

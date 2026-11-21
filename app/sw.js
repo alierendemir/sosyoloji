@@ -1,11 +1,12 @@
 /* Çevrimdışı çalışma için önbellek. Önce ağdan güncel dosya istenir, internet yoksa önbellekteki kopya kullanılır. İçerik güncellendiğinde SURUM değerini artır. */
-var SURUM = "sosyoloji-v4";
+var SURUM = "sosyoloji-v5";
 var DOSYALAR = [
   "./",
   "index.html",
   "styles.css",
   "app.js",
   "oyunlar.js",
+  "kurulum.js",
   "gizlilik.html",
   "manifest.webmanifest",
   "data/kuramcilar.js",

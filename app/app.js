@@ -483,7 +483,7 @@
       '<p><a href="gizlilik.html">Gizlilik politikasının tamamı</a></p></div>' +
       '<div class="bolum"><h2>Kaynaklar hakkında not</h2><p>Kuramcıların eserlerinde özgün ad ve ilk yayın yılı verilmiştir. Türkçe baskılar için yayınevi ve yıl bilgisi baskıya göre değiştiğinden kaynakçana elindeki baskının künyesini yazman önerilir. Makale özetleri makalelerin kendi özetlerine dayanarak hazırlanmış kısa tanıtımlardır.</p></div>' +
       '<div class="bolum"><h2>Görünüm</h2><div class="dugme-sira"><button class="dugme" data-tema="">Sistem</button><button class="dugme" data-tema="light">Açık</button><button class="dugme" data-tema="dark">Koyu</button></div></div>' +
-      '<p class="alt-not">Sürüm 1.3 · © 2026 Ali Eren Demir</p>';
+      '<p class="alt-not">Sürüm 1.4 · © 2026 Ali Eren Demir</p>';
   }
   function hakkindaBagla() {
     var pd = document.getElementById("paylas");
