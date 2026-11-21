@@ -218,3 +218,27 @@ window.MAKALELER = [
     url: "https://dergipark.org.tr/tr/pub/insan/article/1683020",
     ozet: "Edebiyat ile sosyoloji arasındaki etkileşimi Mills'in sosyolojik imgelem kavramı üzerinden tartışır." }
 ];
+
+/* İl yazılarında kullanılan kaynaklar (künyeler DergiPark makale sayfalarından ve PDF başlıklarından doğrulanmıştır). */
+window.MAKALELER.push(
+  { kuramci: [], il: "adana", yazarlar: [["Kütük", "Abdurrahman"]], yil: 2022,
+    baslik: "Çukurova Türkmenlerinin son iskânı",
+    dergi: "Akademik Tarih ve Düşünce Dergisi", cilt: "9", sayi: "4", sayfa: "1418–1443", doi: "",
+    url: "https://dergipark.org.tr/tr/pub/atdd/issue/74756/1173029",
+    ozet: "17. ve 18. yüzyıldaki savaşlar ve Celali isyanlarının Çukurova'daki düzeni nasıl değiştirdiğini ve 1865'teki Fırka-i İslahiye ile Türkmen aşiretlerinin yerleşik hayata geçirilmesini inceler." },
+  { kuramci: [], il: "adana", yazarlar: [["Sansar", "M. Fatih"]], yil: 2013,
+    baslik: "19. yüzyılda Çukurova Türkmen aşiretleri I: Cerid ve Tecirliler",
+    dergi: "Studies of The Ottoman Domain (Osmanlı Hakimiyet Sahası Çalışmaları)", cilt: "3", sayi: "5", sayfa: "1–17", doi: "",
+    url: "https://dergipark.org.tr/tr/pub/ohsc/article/131740",
+    ozet: "Çukurova'da kışlayan Cerid ve Tecirli aşiretlerinin 19. yüzyıldaki iskân sürecini ve Fırka-i Islahiye ile Osmaniye çevresine yerleştirilmelerini ele alır." },
+  { kuramci: [], il: "adana", yazarlar: [["Demirbağ", "Hüseyin"]], yil: 2023,
+    baslik: "Çukurova’nın fatihlerinden Varsak Türkmenleri",
+    dergi: "Yüzüncü Yıl Üniversitesi Sosyal Bilimler Enstitüsü Dergisi", cilt: "", sayi: "60", sayfa: "174–190", doi: "10.53568/yyusbed.1209533",
+    url: "https://dergipark.org.tr/tr/pub/yyusbed/article/1209533",
+    ozet: "Varsak Türkmenlerinin Çukurova'daki siyasi rolünü, Kozanoğulları beyliğini ve 1865 iskânından sonra Varsak kimliğinin büyük ölçüde unutulmasını saha araştırmasıyla birlikte tartışır." },
+  { kuramci: [], il: "adana", yazarlar: [["Yaktı", "Özlem"]], yil: 2013,
+    baslik: "Amerikan İç Savaşı ve Adana: Pamuk tarımının Adana’nın modernleşme sürecine etkisi",
+    dergi: "Atatürk Yolu Dergisi", cilt: "", sayi: "54", sayfa: "273–296", doi: "10.1501/Tite_0000000411",
+    url: "https://dergipark.org.tr/tr/pub/ankuayd/article/508160",
+    ozet: "1861'deki Amerikan İç Savaşı'nın Çukurova'yı dünya pamuk ağına nasıl bağladığını ve pamuk ekonomisinin Adana'da kentleşmeden gündelik yaşama uzanan dönüşümlerini inceler." }
+);
