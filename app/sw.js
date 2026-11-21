@@ -1,10 +1,11 @@
 /* Çevrimdışı çalışma için basit önbellek. İçerik güncellendiğinde SURUM değerini artır. */
-var SURUM = "sosyoloji-v1";
+var SURUM = "sosyoloji-v2";
 var DOSYALAR = [
   "./",
   "index.html",
   "styles.css",
   "app.js",
+  "oyunlar.js",
   "gizlilik.html",
   "manifest.webmanifest",
   "data/kuramcilar.js",
