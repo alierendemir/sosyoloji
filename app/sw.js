@@ -1,5 +1,5 @@
 /* Çevrimdışı çalışma için basit önbellek. İçerik güncellendiğinde SURUM değerini artır. */
-var SURUM = "sosyoloji-v2";
+var SURUM = "sosyoloji-v3";
 var DOSYALAR = [
   "./",
   "index.html",

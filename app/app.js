@@ -143,7 +143,7 @@
       '<a class="kutucuk" href="#/tez"><b>Tezine ekle</b><span>Kuramsal çerçeve ve APA atıf</span></a>' +
       '<a class="kutucuk" href="#/listem"><b>Okuma listem</b><span>Kaydettiklerin</span></a>' +
       "</div>" +
-      '<p class="alt-not">Uygulama hiçbir kişisel veri toplamaz. Okuma listen ve test sonuçların yalnızca bu cihazda saklanır. <a href="#/hakkinda">Hakkında</a></p>' +
+      '<p class="alt-not">Geliştiren: <b>Ali Eren Demir</b><br>Uygulama hiçbir kişisel veri toplamaz. Okuma listen ve test sonuçların yalnızca bu cihazda saklanır. <a href="#/hakkinda">Hakkında</a></p>' +
       "</div>";
   }
   function anaSayfaBagla() {
@@ -470,6 +470,8 @@
   function hakkindaSayfa() {
     return '<h1>Hakkında</h1>' +
       "<p>Sosyoloji Cebimde, sosyoloji öğrencileri ve araştırmacılar için hazırlanmış ücretsiz bir öğrenme ve başvuru uygulamasıdır.</p>" +
+      '<div class="kart"><div class="soluk kucuk">Geliştiren</div><b style="font-family:var(--serif);font-size:1.15rem">Ali Eren Demir</b>' +
+      '<div class="dugme-sira"><a class="dugme" href="https://github.com/alierendemir/sosyoloji" target="_blank" rel="noopener">GitHub ↗</a><button class="dugme" id="paylas">Uygulamayı paylaş</button></div></div>' +
       '<div class="bolum"><h2>İçerik</h2><ul class="duz">' +
       "<li>" + KV.length + " kavram için tanım, örnek ve makalede kullanım önerisi</li>" +
       "<li>" + KR.length + " kuramcı için temel fikirler, eserler ve tez önerileri</li>" +
@@ -479,9 +481,15 @@
       '<p><a href="gizlilik.html">Gizlilik politikasının tamamı</a></p></div>' +
       '<div class="bolum"><h2>Kaynaklar hakkında not</h2><p>Kuramcıların eserlerinde özgün ad ve ilk yayın yılı verilmiştir. Türkçe baskılar için yayınevi ve yıl bilgisi baskıya göre değiştiğinden kaynakçana elindeki baskının künyesini yazman önerilir. Makale özetleri makalelerin kendi özetlerine dayanarak hazırlanmış kısa tanıtımlardır.</p></div>' +
       '<div class="bolum"><h2>Görünüm</h2><div class="dugme-sira"><button class="dugme" data-tema="">Sistem</button><button class="dugme" data-tema="light">Açık</button><button class="dugme" data-tema="dark">Koyu</button></div></div>' +
-      '<p class="alt-not">Sürüm 1.1</p>';
+      '<p class="alt-not">Sürüm 1.2 · © 2026 Ali Eren Demir</p>';
   }
   function hakkindaBagla() {
+    var pd = document.getElementById("paylas");
+    if (pd) pd.addEventListener("click", function () {
+      var veri = { title: "Sosyoloji Cebimde", text: "Sosyoloji kavramları, kuramcılar, Türkçe makaleler ve oyunlar. Ücretsiz ve reklamsız.", url: "https://alierendemir.github.io/sosyoloji/" };
+      if (navigator.share) navigator.share(veri).catch(function () {});
+      else kopyala(veri.url);
+    });
     document.querySelectorAll("[data-tema]").forEach(function (b) {
       b.addEventListener("click", function () { var t = b.getAttribute("data-tema"); temaUygula(t); yaz("tema", t); bildir("Görünüm güncellendi"); });
     });
