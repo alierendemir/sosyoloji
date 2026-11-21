@@ -1,5 +1,9 @@
 # Sosyoloji Cebimde
 
+Geliştiren: **Ali Eren Demir**
+
+**Uygulamayı aç:** https://alierendemir.github.io/sosyoloji/
+
 Sosyoloji kavramları, kuramcılar, künyesi doğrulanmış Türkçe makaleler, kısa testler ve tez yazım rehberi içeren ücretsiz, çevrimdışı çalışan ve veri toplamayan bir öğrenme uygulaması.
 
 - Uygulama dosyaları: `app/`
