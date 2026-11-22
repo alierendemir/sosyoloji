@@ -1,5 +1,5 @@
-/* Çevrimdışı çalışma için önbellek. Önce ağdan güncel dosya istenir, internet yoksa önbellekteki kopya kullanılır. İçerik güncellendiğinde SURUM değerini artır. */
-var SURUM = "sosyoloji-v6";
+/* Çevrimdışı çalışma için önbellek. Aynı adreste Türkü Defteri de yayınlandığı için yalnızca "sosyoloji-" ile başlayan eski önbellekler silinir. Önce ağdan güncel dosya istenir, internet yoksa önbellekteki kopya kullanılır. İçerik güncellendiğinde SURUM değerini artır. */
+var SURUM = "sosyoloji-v7";
 var DOSYALAR = [
   "./",
   "index.html",
@@ -24,7 +24,7 @@ self.addEventListener("install", function (e) {
 
 self.addEventListener("activate", function (e) {
   e.waitUntil(caches.keys().then(function (anahtarlar) {
-    return Promise.all(anahtarlar.filter(function (k) { return k !== SURUM; }).map(function (k) { return caches.delete(k); }));
+    return Promise.all(anahtarlar.filter(function (k) { return k.indexOf("sosyoloji-") === 0 && k !== SURUM; }).map(function (k) { return caches.delete(k); }));
   }).then(function () { return self.clients.claim(); }));
 });
 

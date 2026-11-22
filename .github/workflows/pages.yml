@@ -7,7 +7,7 @@ name: Uygulamayı GitHub Pages'te yayınla
 on:
   push:
     branches: [main]
-    paths: ["app/**", ".github/workflows/pages.yml"]
+    paths: ["app/**", "turku/**", ".github/workflows/pages.yml"]
   workflow_dispatch:
 
 permissions:
@@ -25,9 +25,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      # Sosyoloji Cebimde sitenin köküne, Türkü Defteri /turku/ altına yerleşir.
+      - name: Siteyi birleştir
+        run: |
+          mkdir -p _site
+          cp -r app/. _site/
+          mkdir -p _site/turku
+          cp -r turku/. _site/turku/
+          rm -rf _site/turku/araclar
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: app
+          path: _site
 
   deploy:
     needs: build

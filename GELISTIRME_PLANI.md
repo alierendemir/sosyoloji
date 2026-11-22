@@ -57,3 +57,12 @@ Yeni oyun fikirleri:
 - Kuramcılar için zaman çizelgesi görünümü
 - Test sonunda yanlış yapılan konuları gösteren özet
 - Türk sosyoloji tarihi için ayrı bir bölüm
+
+## Türkü Defteri
+
+Sürüm 1.0 (22 Kasım 2026): 640 kayıt. Vikikaynak'tan Tunceli, Erzincan, Sivas, Malatya ve Elazığ türküleri, Karacaoğlan türküleri, Pir Sultan Abdal, Kul Himmet, Hatayi, Virani, Kaygusuz Abdal, Muhyiddin Abdal, Yemini ve Yunus Emre deyişleri. Dertli Divani, Erdal Erzincan, Musa Eroğlu, Ahmet Aslan, Yılmaz Çelik, Metin Kemal Kahraman, Taylan Yıldız, Aynur Doğan ve Özgür Polat kayıtları YouTube bağlantısıyla. Repertuvar (yıldız), notlar, kendi türkünü ekleme, yedekleme, ekranı açık tutma, yazı boyutu ve 19 düzenli bağlama akort aleti.
+
+Sıradakiler:
+- Haftalık güncellemede 5–10 yeni YouTube eşleştirmesi (`turku/araclar/linkler.py`) ve yeni bağlantı kayıtları (`baglanti.py`).
+- Vikikaynak'ta Bingöl, Erzurum, Kars, Kahramanmaraş ve Adıyaman türkü kategorilerinin eklenmesi.
+- Hatayi ve Kul Himmet için Vikikaynak dışında kamu malı kaynak taraması.
