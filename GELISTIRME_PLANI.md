@@ -64,7 +64,10 @@ Sürüm 1.0 (22 Kasım 2026): 640 kayıt. Vikikaynak'tan Tunceli, Erzincan, Siva
 
 Sürüm 1.1 (22 Kasım 2026): 711 kayıt. Merdan Güzelgün, Hüseyin Korkankorkmaz, Cengiz Özkan, Arif Sağ, Tolga Sağ, Muharrem Temiz, Sabahat Akkiraz, Canan Çal, Erol Parlak, Ali Ekber Çiçek, Hasret Gültekin, Muhlis Akarsu, Mikail Aslan, Grup Abdal, Gani Pekşen, Özlem Özdil, Ender Balkır, Mustafa Özarslan, Erdem Şimşek, Aşık Mahzuni Şerif ve Aşık Daimi kayıtları eklendi. Ulaş Özdemir ve İsmail Özden için doğrulanabilir bir video bulunamadı, sonraki haftalarda yeniden aranacak.
 
+Sürüm 1.2: Android ve iPhone için İndir düğmesi ve kurulum penceresi. Güncellemeler haftalık yapılmaz, istendiğinde yapılır.
+
 Sıradakiler:
+- Uygulamayı ayrı bir depoya (alierendemir/turku) taşı, böylece Sosyoloji Cebimde'den bağımsız bir adres ve simgeyle kurulsun.
 - Ulaş Özdemir ve İsmail Özden kayıtlarını bul.
 - Haftalık güncellemede 5–10 yeni YouTube eşleştirmesi (`turku/araclar/linkler.py`) ve yeni bağlantı kayıtları (`baglanti.py`).
 - Vikikaynak'ta Bingöl, Erzurum, Kars, Kahramanmaraş ve Adıyaman türkü kategorilerinin eklenmesi.

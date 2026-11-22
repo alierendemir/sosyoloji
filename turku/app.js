@@ -3,7 +3,7 @@
 (function () {
   "use strict";
 
-  var SURUM = "1.1";
+  var SURUM = "1.2";
   var sayfa = document.getElementById("sayfa");
 
   /* ---------- Yardımcılar ---------- */
@@ -77,6 +77,7 @@
     else document.documentElement.setAttribute("data-tema", t);
   }
   puntoUygula(); temaUygula();
+  window.TD = { bildir: bildir };
 
   /* ---------- Ekranı açık tutma (Wake Lock) ---------- */
   var kilit = null, kilitIsteniyor = false;
