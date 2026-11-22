@@ -18,3 +18,17 @@ LINK = {
  "ceke ceke ben bu dertten olurum": [("Erdal Erzincan","l_kctfx8qnw")],
  "su yalan dunyaya geldim geleli": [("Yılmaz Çelik","MO_2qxLo77E")],
 }
+EK = {
+ "bugun bize pir geldi": [("Merdan Güzelgün, Kutsal Evcimen","Y74BdeNyRLg"),("Arif Sağ","w4T8nMo7UIM")],
+ "ondortbin yil gezdim pervanelikte": [("Ali Ekber Çiçek","GPrM7YiwgCg","Haydar Haydar"),("Erdem Şimşek","ZincFjcZWEU","Haydar Haydar, bağlama")],
+ "gelin oldum karabel in eline": [("Muharrem Temiz","u_m43TiDB8o","Yayladan Gel Kömür Gözlüm")],
+ "bir ay dogar": [("Cengiz Özkan","4ik9ui97R58")],
+ "gonul gel seninle": [("Ender Balkır","FvJJ-Q-Rbqs","Çiçek Türküleri")],
+ "nasil yar diyeyim ben boyle yare": [("Ender Balkır","BV5UaP3wgdU","Çiçek Türküleri")],
+ "sabahtan ugradim ben bir figana": [("Ender Balkır","sbm1tPy9WfU","Çiçek Türküleri")],
+ "bulbul havalanmis": [("Grup Abdal","bzvnxsuIz1g")],
+ "ceke ceke ben bu dertten olurum": [("Sabahat Akkiraz","C82Kzn6K3Rg","Sakın Dağlar Gibi Yüceyim Deme ile birlikte")],
+ "bir guzelin asigiyim erenler": [("Arif Sağ","JvOAekVmgGw")],
+ "seyyah oldum su alemi gezerim": [("Hüseyin Korkankorkmaz","VvJy3rHqHLU","Seyyah Oldum")],
+}
+for k_,v_ in EK.items(): LINK[k_]=LINK.get(k_,[])+v_
