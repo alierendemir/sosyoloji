@@ -25,14 +25,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
-      # Sosyoloji Cebimde sitenin köküne, Türkü Defteri /turku/ altına yerleşir.
+      # Sosyoloji Cebimde sitenin köküne yerleşir. turku/ klasöründe yalnızca
+      # alierendemir/turku deposuna taşınan Türkü Defteri için yönlendirme sayfası var.
       - name: Siteyi birleştir
         run: |
           mkdir -p _site
           cp -r app/. _site/
           mkdir -p _site/turku
           cp -r turku/. _site/turku/
-          rm -rf _site/turku/araclar
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
