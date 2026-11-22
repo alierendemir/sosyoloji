@@ -44,4 +44,5 @@ Bu depo Ali Eren Demir'in "Sosyoloji Cebimde" uygulamasıdır. Yeni bir oturumda
 - Dosyalar: `turku/app.js` (sayfalar, repertuvar, ekranı açık tutma), `turku/akort.js` (mikrofonlu bağlama akort aleti), `turku/data/turkuler.js` (türküler), `turku/data/duzenler.js` (Kaya 2021, Tablo 3), `turku/sw.js` (önbellek, `SURUM` değeri "turku-" ile başlar).
 - Sözler yalnızca telifi serbest metinlerden alınır: Vikikaynak'taki anonim türküler ve kamu malı ozanlar. Günümüz sanatçılarının özgün eserleri, Kurmancî ve Kirmanckî kayıtlar yalnızca YouTube bağlantısıyla girer. Söz uydurulmaz, YouTube video kimliği yalnızca arama sonucunda görülen gerçek adresten alınır.
 - Veri `turku/araclar/` betikleriyle üretilir (bkz. `turku/araclar/BENIOKU.md`). Ortamda `tr.wikisource.org` erişime açık olmalıdır.
+- Türkü Defteri için haftalık zamanlanmış görev yoktur. Ali Eren Demir istediğinde güncellenir.
 - Her güncellemede `turku/sw.js` içindeki `SURUM` ve `turku/app.js` içindeki `SURUM` değerini artır. Sosyoloji uygulamasının `app/sw.js` dosyası yalnızca "sosyoloji-" önbelleklerini siler, bu kural korunmalı.

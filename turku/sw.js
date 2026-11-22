@@ -1,12 +1,13 @@
 /* Türkü Defteri çevrimdışı önbelleği. Önce ağdan güncel dosya istenir, internet yoksa önbellekteki kopya kullanılır.
    Böylece yeni eklenen türküler bağlantı olduğunda kendiliğinden gelir. İçerik güncellendiğinde SURUM değerini artır. */
-var SURUM = "turku-v2";
+var SURUM = "turku-v3";
 var DOSYALAR = [
   "./",
   "index.html",
   "styles.css",
   "app.js",
   "akort.js",
+  "kurulum.js",
   "manifest.webmanifest",
   "data/turkuler.js",
   "data/duzenler.js",
