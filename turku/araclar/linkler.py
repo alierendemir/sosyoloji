@@ -1,0 +1,20 @@
+# Vikikaynak başlığının başı (sadeleştirilmiş) -> YouTube kayıtları (WebSearch sonuçlarından, başlıkta sanatçı adı geçenler)
+LINK = {
+ "otme bulbul otme": [("Tan Taşçı","hOhX89ERr-A")],
+ "donen donsun ben donmezem yolumdan": [("Selda Bağcan","tm1GooDLqNc"),("Cem Karaca","90pFKJY98So"),("Ali Sal","MFYRGeSw2f8")],
+ "dersim dort dag icinde": [("Erkan Oğur","yQS0j4eQi0E"),("Ahmet Kaya","ARY8KfESMkk"),("Aynur Haşhaş","jgiJVppp0Bk"),("Elvan Sevim","yYPrzTQt9w0")],
+ "gurbet elde bir hal geldi basima": [("Cengiz Özkan","f2n_JkPbqw0"),("Yavuz Bingöl","w7WhaNnrlhc"),("Haluk Tolga İlhan","9k8arZkFH5A"),("Uğur Işılak","lK40uStU7yc")],
+ "ilgit ilgit esen seher yelleri": [("Gülcan Ertan Hacısüleymanoğlu","ReupGgHzhuQ")],
+ "sabahtan cemalin seyran eyledim": [("Erdal Erzincan","GGP-AK6C8-Y"),("Selda Bağcan","2HjOAIO_uxU"),("Erdal Akkaya","D4ohGFQSvNY")],
+ "su karsi yaylada goc katar katar": [("Cengiz Özkan","gjfEKqfs384"),("Haluk Tolga İlhan","zgM7noDB9Hw"),("Aynur Haşhaş","fVnWjV-vKtQ")],
+ "munzur dagi silelenmis garinen": [("Cengiz Özkan","ygPRFegRihQ"),("Süleyman Hatunoğlu","t3pVGvYTHjc")],
+ "sultan suyu gibi caglayip akma": [("Metin Kemal Kahraman","p9yNdWYiMAI"),("Tonguç Vural","UzKeHmCjOG8"),("Deste Günaydın, Özlem Özgür","xphz2297zZg")],
+ "derdim coktur kangisina yanayim": [("Kerim Yağcı","Uzblc8B883c"),("Ali Ekber Çiçek","pEfbF2SLjqI")],
+ "bir guzelin asigiyim erenler": [("Erdal Erzincan, Mercan Erzincan","NN4DaY4NlAc"),("Erol Eren","EJUvnniuWak"),("Gönül Kahraman","ZC19-WFxb3k")],
+ "taze karlar yagmis karin ustune": [("Selda Gündoğan","-U0YGB87tVI"),("İlkay Akkaya","df6sRppZyxc"),("Yıldız Tilbe","e4kzZaIB-yc")],
+ "yemen ellerinden beri gelirken": [("Erdal Erzincan","UZ_hHdJjnPA")],
+ "kul olayim kalem tutan ellere": [("Erdal Erzincan, Tolga Sağ","qWDrcQSPpdU")],
+ "gozun acik ise gel gir katara": [("Erdal Erzincan","lldfE1bvNE4")],
+ "ceke ceke ben bu dertten olurum": [("Erdal Erzincan","l_kctfx8qnw")],
+ "su yalan dunyaya geldim geleli": [("Yılmaz Çelik","MO_2qxLo77E")],
+}
