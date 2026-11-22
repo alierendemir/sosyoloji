@@ -3,7 +3,7 @@
 (function () {
   "use strict";
 
-  var SURUM = "1.0";
+  var SURUM = "1.1";
   var sayfa = document.getElementById("sayfa");
 
   /* ---------- Yardımcılar ---------- */
@@ -57,7 +57,13 @@
     yaz("turku-yildiz", y);
     return i < 0;
   }
-  function seslendirenler(t) { return (t.dinle || []).map(function (d) { return d.kim; }).filter(Boolean); }
+  function seslendirenler(t) {
+    var adlar = [];
+    (t.dinle || []).forEach(function (d) {
+      String(d.kim || "").split(/\s*,\s*/).forEach(function (a) { if (a && adlar.indexOf(a) < 0) adlar.push(a); });
+    });
+    return adlar;
+  }
   function aramaMetni(t) {
     return sadelestir([t.ad, t.sair, t.yore, seslendirenler(t).join(" "), (t.soz || []).join(" ")].join(" "));
   }

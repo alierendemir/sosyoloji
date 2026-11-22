@@ -86,11 +86,12 @@ for k in kayit:
     for anahtar,lst in LINK.items():
         es=[x for x in kayit if (' '.join(sade(x['ad']))).startswith(anahtar) or anahtar.startswith(' '.join(sade(x['ad'])))]
         if len(es)==1 and es[0] is k:
-            k['dinle']=[{'kim':a,'yt':v} for a,v in lst]
+            k['dinle']=[{'kim':t_[0],'yt':t_[1],'baslik':(t_[2] if len(t_)>2 else '')} for t_ in lst]
 from baglanti import B
 for ad,sair,tur,dil,yore,lst in B:
     k={'id':'b-'+slug(ad),'ad':ad,'sair':sair,'tur':tur,'dil':dil,'yore':yore,'soz':None,'dinle':[{'kim':a,'yt':v,'baslik':b} for a,v,b in lst]}
     if not k['dil']: del k['dil']
+    if not k['tur']: del k['tur']
     kayit.append(k)
 # yinelenen id
 gor={}
@@ -99,7 +100,7 @@ for k in kayit:
     else: gor[k['id']]=1
 json.dump(kayit,open('kayit.json','w'),ensure_ascii=False,indent=1)
 import collections
-print(len(kayit),collections.Counter(k['tur'] for k in kayit),collections.Counter(k['yore'] for k in kayit))
+print(len(kayit),collections.Counter(k.get('tur') for k in kayit),collections.Counter(k.get('yore') for k in kayit))
 print('linkli',sum(1 for k in kayit if k.get('dinle')),[k['ad'] for k in kayit if k.get('dinle')])
 print('atlanan',len(atlanan),collections.Counter(a[1].split(':')[0] for a in atlanan))
 for a in atlanan:
