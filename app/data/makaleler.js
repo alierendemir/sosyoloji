@@ -272,3 +272,17 @@ window.MAKALELER.push(
     ozet: "Adıyaman Organize Sanayi Bölgesi'ndeki 350 tekstil işçisiyle yapılan saha araştırmasına dayanarak kadın işçilerin çalışma koşullarını inceler. Tütün tarımındaki daralmanın göçe ve kentleşmeye etkisine de değinir." }
 );
 
+/* Niyazi Berkes kaynakları (23 Kasım 2026, künyeler DergiPark sayfasından ve PDF başlığından doğrulanmıştır). */
+window.MAKALELER.push(
+  { kuramci: ["berkes"], yazarlar: [["Göksel", "Oğuzhan"]], yil: 2024,
+    baslik: "Niyazi Berkes’in çağdaşlaşma düşüncesi",
+    dergi: "Veche", cilt: "3", sayi: "1", sayfa: "24–30", doi: "10.62147/veche.1443851",
+    url: "https://dergipark.org.tr/tr/pub/veche/article/1443851",
+    ozet: "Berkes'in Türkiye'nin modernleşme sürecine dair çözümlemelerini derler. Çağdaşlaşmayı sekülerleşme olarak okuyan yaklaşımını ve Atatürk devrimlerine yüklediği anlamı özetler." },
+  { kuramci: ["berkes"], yazarlar: [["Yıldız", "Aytaç"]], yil: 2012,
+    baslik: "Niyazi Berkes ve “Türkiye’de Çağdaşlaşma”nın gelişimi",
+    dergi: "Sosyoloji Konferansları", cilt: "", sayi: "46", sayfa: "1–33", doi: "",
+    url: "https://dergipark.org.tr/en/pub/iusoskon/article/119278",
+    ozet: "Türkiye'de Çağdaşlaşma kitabının arka planını Berkes'in 1930'lardan itibaren yazdığı ilk akademik metinler üzerinden inceler. Kitabın 1964'te İngilizce, 1973'te Türkçe yayımlandığını aktarır." }
+);
+

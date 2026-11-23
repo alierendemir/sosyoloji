@@ -440,5 +440,20 @@ window.KURAMCILAR = [
       { orijinal: "Religion and Social Change in Modern Turkey", yil: "1989", tr: "Bediüzzaman Said Nursi Olayı" }
     ],
     tezde: "Türkiye'de siyasal davranış, din ve modernleşme, kent-taşra ilişkileri ve orta sınıf çalışmalarında merkez-çevre kuramı sık kullanılan bir çerçevedir. Kurama yöneltilen eleştirileri de (ikili yapının fazla şematik bulunması gibi) tartışman önerilir."
+  },
+  {
+    id: "berkes", ad: "Niyazi Berkes", yillar: "1908–1988", ulke: "Türkiye / Kanada", ekol: "Türk modernleşmesi / Düşünce tarihi",
+    ozet: "Cumhuriyet döneminin önde gelen sosyal bilimcilerinden biridir. Türkiye'de Çağdaşlaşma adlı eseriyle Osmanlı'dan Cumhuriyet'e uzanan modernleşme sürecini sekülerleşme ekseninde okumuş ve bu alandaki tartışmaları uzun süre biçimlendirmiştir.",
+    fikirler: [
+      "Osmanlı toplumunda diğer Doğu toplumlarında olduğu gibi din ile devlet iç içe geçmiştir. Bu nedenle çağdaşlaşma, sekülerleşme anlamına gelir.",
+      "18. yüzyıldan beri süren modernleşme çabaları geleneksel yapı içinde toplumu ileri taşımakta zorlanmış ve zaman zaman tepkiyle karşılanmıştır.",
+      "Atatürk devrimleri bağımsızlık ve ulusal egemenlik ilkesini benimsediği için bu süreçte bir dönüm noktasıdır.",
+      "Osmanlı-Türk modernleşmesinin laik bir ulus-devletin kuruluşuyla sonuçlanması tarihsel sürecin kaçınılmaz bir sonucu olarak görülür."
+    ],
+    kavramlar: ["cagdaslasma"],
+    eserler: [
+      { orijinal: "The Development of Secularism in Turkey", yil: "1964 (Türkçesi 1973)", tr: "Türkiye'de Çağdaşlaşma" }
+    ],
+    tezde: "Türk modernleşmesi, laiklik, din ve toplum ilişkisi ve Cumhuriyet'in kuruluş dönemi üzerine çalışmalarda Berkes temel başvuru kaynaklarından biridir. Onun ilerlemeci ve aydınlanmacı yaklaşımını Şerif Mardin'in merkez-çevre ve kültür vurgusuyla karşılaştırmak, kuramsal bölüme dengeli bir tartışma kazandırır."
   }
 ];
