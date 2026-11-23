@@ -254,5 +254,10 @@ window.KAVRAMLAR = [
     tanim: "Şerif Mardin'in Osmanlı ve Türk siyasal yaşamını açıklamak için kullandığı çerçevedir. Devlet seçkinleri ve bürokrasiden oluşan merkez ile taşra, köylüler ve yerel güçlerden oluşan çevre arasındaki gerilim siyasal tarihin temel dinamiklerinden biri olarak görülür.",
     ornek: "Çok partili döneme geçişte taşradaki seçmenlerin merkezi temsil eden partiye karşı muhalefet partisini desteklemesi.",
     kullanim: "Türkiye'de siyasal davranış, din ve modernleşme ile kent-taşra ilişkileri çalışmalarında sık kullanılan bir çerçevedir.",
-    iliskili: ["hars-medeniyet", "otorite-tipleri"] }
+    iliskili: ["hars-medeniyet", "otorite-tipleri"] },
+  { id: "cagdaslasma", ad: "Çağdaşlaşma (Sekülerleşme)", ing: "Secularization / Modernization", kuramci: ["berkes"], alan: "Türk modernleşmesi",
+    tanim: "Niyazi Berkes'in Osmanlı-Türk modernleşmesini açıklamak için kullandığı kavramdır. Berkes'e göre din ile devletin iç içe geçtiği bir toplumda çağdaşlaşma, toplumsal ve siyasal alanın dinin belirleyiciliğinden ayrışması yani sekülerleşme sürecidir. Bu süreç 18. yüzyıldaki ıslahat girişimlerinden laik ulus-devletin kuruluşuna uzanan uzun bir dönüşüm olarak ele alınır.",
+    ornek: "Hukukun, eğitimin ve takvimin dinî kurallardan bağımsız olarak düzenlenmesi Berkes'in çağdaşlaşma olarak tarif ettiği dönüşümün tipik örnekleridir.",
+    kullanim: "Laiklik, din ve devlet ilişkisi ve Cumhuriyet'in kuruluş dönemi çalışmalarında kullanılabilir. Kavramı Mardin'in merkez-çevre yaklaşımıyla ve Gökalp'in hars-medeniyet ayrımıyla karşılaştırmak tartışmayı zenginleştirir.",
+    iliskili: ["merkez-cevre", "hars-medeniyet", "rasyonellesme"] }
 ];

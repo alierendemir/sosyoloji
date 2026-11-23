@@ -1,5 +1,5 @@
 /* Çevrimdışı çalışma için önbellek. Aynı adreste Türkü Defteri de yayınlandığı için yalnızca "sosyoloji-" ile başlayan eski önbellekler silinir. Önce ağdan güncel dosya istenir, internet yoksa önbellekteki kopya kullanılır. İçerik güncellendiğinde SURUM değerini artır. */
-var SURUM = "sosyoloji-v7";
+var SURUM = "sosyoloji-v8";
 var DOSYALAR = [
   "./",
   "index.html",
